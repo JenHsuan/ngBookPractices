@@ -8,11 +8,11 @@ import { UserService } from '../services/user.service';
 })
 
 export class UserDemoComponent {
-  userService: UserService;
+  //userService: UserService;
   userName?: string;
-  constructor() {
-    const injector: any = ReflectiveInjector.resolveAndCreate([UserService])
-    this.userService = injector.get(UserService);
+  constructor(private userService: UserService) {
+    //const injector: any = ReflectiveInjector.resolveAndCreate([UserService])
+    //this.userService = injector.get(UserService);
   }
   signIn(): void{
     this.userService.setUser({ name: 'Sean' })
