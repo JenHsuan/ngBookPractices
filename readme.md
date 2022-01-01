@@ -12,9 +12,9 @@ npm install -g @angular/cli
 * Execute
 ```
 
-* cd folder
-* npm install
-* ng serve
+cd folder
+npm install
+ng serve
 
 ```
 
