@@ -1,1 +1,4 @@
-<p>simple-http works!</p>
+<h2>Basic request</h2>
+<button type="button" (click)="makeBasicRequest()">Make request</button>
+<div *ngIf="loading">loading...</div>
+<pre *ngIf="!loading">{{data | json}}</pre>
