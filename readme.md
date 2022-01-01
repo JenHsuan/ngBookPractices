@@ -19,4 +19,6 @@ npm install -g @angular/cli
 ```
 
 ## Notes
-* [Dependency injection]()
+### Dependency injection
+* [DI in constructor (no parameters)]()
+* [DI in constructor (has parameters)]()
