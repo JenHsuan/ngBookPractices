@@ -1,0 +1,4 @@
+<h2>More requests</h2>
+<button type="button" (click)="makePost()">Post</button>
+<div *ngIf="loading">loading...</div>
+<pre *ngIf="!loading">{{data | json}}</pre>

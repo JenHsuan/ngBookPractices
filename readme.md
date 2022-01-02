@@ -25,3 +25,4 @@ ng serve
 ### Learn httpClient and observable
 * simpleHttp
 * youtubeSearch
+* moreHttpRequest
