@@ -20,7 +20,8 @@ ng serve
 
 ## Notes
 ### Dependency injection
-* [DI in constructor (no parameters)]()
-* [DI in constructor (has parameters)]()
+* priceService
+* analyticsService
 ### Learn httpClient and observable
 * simpleHttp
+* youtubeSearch
