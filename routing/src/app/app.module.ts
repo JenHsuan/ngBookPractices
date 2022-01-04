@@ -12,6 +12,8 @@ import { LoginComponent } from './login/login.component';
 import { AUTH_PROVIDERS } from './injectables/auth.injectable';
 import { ProtectedComponent } from './protected/protected.component';
 import { LogginGuard } from './services/logged-in.guard';
+import { MainComponent } from './main/main.component';
+import { MoreinfoComponent } from './moreinfo/moreinfo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { LogginGuard } from './services/logged-in.guard';
     ContactComponent,
     ProductComponent,
     LoginComponent,
-    ProtectedComponent
+    ProtectedComponent,
+    MainComponent,
+    MoreinfoComponent
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { ProductComponent } from './product/product.component';
+import {
+  ProductComponent,
+  routes as childrenRoutes
+} from './product/product.component';
 import { ProtectedComponent } from './protected/protected.component';
 import { LogginGuard } from './services/logged-in.guard';
 
@@ -13,7 +16,12 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent},
   { path: 'contact', component: ContactComponent },
-  { path: 'product/:id', component: ProductComponent},
+  //{ path: 'product/:id', component: ProductComponent},
+  {
+    path: 'products',
+    component: ProductComponent,
+    children: childrenRoutes
+  },
   { path: 'login', component: LoginComponent },
   {
     path: 'protected',

@@ -47,4 +47,5 @@ ng serve
 ```
 
 - LoggedIn: CanActivate interface
+- Nested routes
 # References
