@@ -1,0 +1,12 @@
+<div *ngIf="track">
+    {{ track['name'] }}
+    <p *ngIf="track['album']">
+        <img src="{{ track['album']['images'][1]['url']}}">
+    </p>
+    <p>
+        <audio controls src="{{ track['preview_url']}}"></audio>
+    </p>
+    <p>
+        <a href (click)="back()">Back</a>
+    </p>
+</div>
