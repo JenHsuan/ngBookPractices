@@ -8,6 +8,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ProductComponent } from './product/product.component';
+import { LoginComponent } from './login/login.component';
+import { AUTH_PROVIDERS } from './injectables/auth.injectable';
+import { ProtectedComponent } from './protected/protected.component';
+import { LogginGuard } from './services/logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -15,14 +19,18 @@ import { ProductComponent } from './product/product.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProductComponent
+    ProductComponent,
+    LoginComponent,
+    ProtectedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [
-    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+    ...AUTH_PROVIDERS,
+    LogginGuard
   ],
   bootstrap: [AppComponent]
 })

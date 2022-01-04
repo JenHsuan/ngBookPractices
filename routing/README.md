@@ -1,27 +1,50 @@
 # Routing
+It's a example project in the routing chapter of the ng-book
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+# Usages
 
-## Development server
+* Update or installl angular cli on the local dev environment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
 
-## Code scaffolding
+npm install -g @angular/cli
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
 
-## Build
+* Execute
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+cd folder
+npm install
+ng serve
 
-## Running unit tests
+```
+# Notes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Navagation bar
+    - Add [routerLink] and router-outlet in UI
+    - Register routes/component in module
 
-## Running end-to-end tests
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+/*[url, path parameter]*/
+[routerLink]="['/tracks', t['id']]"
 
-## Further help
+/*The section to show the specific route*/
+<router-outlet></router-outlet>
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+
+- Injectables
+- Auth service
+- Login
+    - Use localStorage as the login check
+    - The UI can call the service directly
+
+- Default event in Angular
+```
+(click)="login(username.value, password.value)"
+```
+
+- LoggedIn: CanActivate interface
+# References
