@@ -40,3 +40,7 @@ ng serve
     - routing
     - music
 
+### Rx & Observerable
+- Pipe, operators
+    - youtubeSearch
+
