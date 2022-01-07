@@ -19,6 +19,15 @@ ng serve
 ```
 
 # Notes
+## Passig states from parents to childs
+- Basic
+    - angular-reddit
+
+```
+@Input
+
+```
+
 ## Dependency injection
 - Basic
     - priceService
