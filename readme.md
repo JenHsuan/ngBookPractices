@@ -19,6 +19,30 @@ ng serve
 ```
 
 # Notes
+## Use Bootstrap in Angular
+* Install Bootstrap
+
+```
+
+npm install --save bootstrap@3 jquery
+
+```
+
+* Modify the build section in angular.json
+
+```
+
+
+            "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+
+```
 ## Passig states from parents to childs
 - Basic
     - angular-reddit
