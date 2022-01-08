@@ -1,0 +1,8 @@
+.description {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: center;
+    padding-left: 40px;
+}
+
