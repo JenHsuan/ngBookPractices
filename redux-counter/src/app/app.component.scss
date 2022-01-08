@@ -1,0 +1,19 @@
+.counter-contaier {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+.counter {
+    line-height: 30px;
+}
+
+.control-panel {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
