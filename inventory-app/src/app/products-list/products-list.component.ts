@@ -2,9 +2,14 @@ import {
   Component,
   EventEmitter,
   Input,
-  Output
+  Output,
+  Inject
 } from '@angular/core';
 import { Product } from '../product.model';
+import { SetCurrentProduct } from '../redux/actions';
+import { IProductState } from '../redux/states';
+import { AppStore } from '../redux/stores';
+import { Store } from 'redux';
 
 @Component({
   selector: 'app-products-list',
@@ -13,26 +18,22 @@ import { Product } from '../product.model';
 })
 
 export class ProductsListComponent {
-  @Output() onProductSelected:EventEmitter<Product>;
   @Input() productList: Product[];
 
-  private currentProduct: Product;
-
-  constructor() {
-    this.onProductSelected = new EventEmitter();
+  constructor(@Inject(AppStore) private store: Store<IProductState>) {
   }
 
   clicked(product: Product): void {
-    this.currentProduct = product;
-    this.onProductSelected.emit(product);
+    this.store.dispatch(SetCurrentProduct(product));
   }
 
   isSelected(product: Product): boolean {
-    if (!product || !this.currentProduct) {
+    const state: IProductState = this.store.getState() as IProductState;
+    if (!product || !state.currentProduct) {
       return false;
     }
 
-    return product.sku === this.currentProduct.sku;
+    return product.sku === state.currentProduct.sku;
   }
 
 }

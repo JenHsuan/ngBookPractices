@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { Product } from './product.model';
-
+import { IProductState } from './redux/states';
+import { AppStore } from './redux/stores';
+import { Store } from 'redux';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,7 +10,7 @@ import { Product } from './product.model';
 })
 export class AppComponent {
   products: Product[];
-  constructor() {
+  constructor(@Inject(AppStore) private store: Store<IProductState>) {
     this.products = [
       new Product(
        'MYSHOES',
@@ -29,9 +31,11 @@ export class AppComponent {
        ['Men', 'Accessories', 'Hats'],
        29.99)
     ];
+    store.subscribe(() => this.productWasSelected());
   }
 
-  productWasSelected(product: Product) {
-    console.log('Product click: ', product)
+  productWasSelected() {
+    const state: IProductState = this.store.getState() as IProductState;
+    console.log('Product click: ', state.currentProduct)
   }
 }
