@@ -7,7 +7,7 @@ import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
-
+import { AppStoreInjectable } from './redux/stores';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,9 @@ import { PriceDisplayComponent } from './price-display/price-display.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ...AppStoreInjectable
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
