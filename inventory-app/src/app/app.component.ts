@@ -1,5 +1,4 @@
 import { Component, Inject } from '@angular/core';
-import { Product } from './product.model';
 import { IProductState } from './redux/states';
 import { AppStore } from './redux/stores';
 import { Store } from 'redux';

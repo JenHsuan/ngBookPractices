@@ -1,8 +1,5 @@
 import {
   Component,
-  EventEmitter,
-  Input,
-  Output,
   Inject
 } from '@angular/core';
 import { Product } from '../product.model';
