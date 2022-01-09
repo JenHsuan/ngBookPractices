@@ -18,9 +18,11 @@ import { Store } from 'redux';
 })
 
 export class ProductsListComponent {
-  @Input() productList: Product[];
+  productList: Product[];
 
   constructor(@Inject(AppStore) private store: Store<IProductState>) {
+    const state: IProductState = this.store.getState() as IProductState;
+    this.productList = state.products;
   }
 
   clicked(product: Product): void {
