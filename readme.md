@@ -77,3 +77,14 @@ npm install --save bootstrap@3 jquery
 - Pipe, operators
     - youtubeSearch
 
+## Styling
+- inline, external, hybrid
+    - advanced-components
+- encapsulation
+    - advanced-components
+
+## Directive
+- customized directive
+    - advanced-components
+- ng-content
+    - advanced-components

@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
       border: 2px solid red;
       background-color: yellow;
       text-align: center;
-      margin-bottom: 20px
+      margin-bottom: 20px;
     }
     `
   ]
