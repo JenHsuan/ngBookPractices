@@ -1,0 +1,23 @@
+<h4 class="ui horizontal divider header">
+    OnChanges
+</h4>
+
+<div class="ui form">
+    <div class="field">
+        <label>Name</label>
+        <input type="text"
+               #nameFld
+               value="{{ name }}"
+               (keyup)="setValues(nameFld.value, commentFld.value)">
+    </div>
+    <div class="field">
+        <label>Comment</label>
+        <textarea #commentFld
+                  (keyup)="setValues(nameFld.value, commentFld.value)"
+                  rows="2">{{ comment }}</textarea>
+    </div>
+</div>
+<app-on-changes
+    [name]="name"
+    [comment]="comment">
+</app-on-changes>

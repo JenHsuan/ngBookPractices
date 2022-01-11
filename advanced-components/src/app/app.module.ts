@@ -16,6 +16,11 @@ import { ContentProjectionComponent } from './content-projection/content-project
 import { ContentTabsetComponent } from './tabs/content-tabset/content-tabset.component';
 import { ContentTabComponent } from './tabs/content-tab/content-tab.component';
 import { ContentTabsDemoComponent } from './tabs/content-tabs-demo/content-tabs-demo.component';
+import { OnInitComponent } from './lifecycle/on-init/on-init.component';
+import { OnInitDemoComponent } from './lifecycle/on-init-demo/on-init-demo.component';
+import { OnChangesComponent } from './lifecycle/on-changes/on-changes.component';
+import { OnChangesDemoComponent } from './lifecycle/on-changes-demo/on-changes-demo.component';
+import { CommentComponent } from './lifecycle/differs/comment/comment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +41,12 @@ import { ContentTabsDemoComponent } from './tabs/content-tabs-demo/content-tabs-
     ContentProjectionComponent,
     ContentTabsetComponent,
     ContentTabComponent,
-    ContentTabsDemoComponent
+    ContentTabsDemoComponent,
+    OnInitComponent,
+    OnInitDemoComponent,
+    OnChangesComponent,
+    OnChangesDemoComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule
