@@ -13,6 +13,9 @@ import { PopupDemoComponent3, PopDirective3 } from './host/popup-demo/steps/host
 import { PopupDemoComponent4, PopDirective4 } from './host/popup-demo/steps/host-4';
 import { MessageComponent } from './content-projection/message/message.component';
 import { ContentProjectionComponent } from './content-projection/content-projection/content-projection.component';
+import { ContentTabsetComponent } from './tabs/content-tabset/content-tabset.component';
+import { ContentTabComponent } from './tabs/content-tab/content-tab.component';
+import { ContentTabsDemoComponent } from './tabs/content-tabs-demo/content-tabs-demo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,10 @@ import { ContentProjectionComponent } from './content-projection/content-project
     PopupDemoComponent4,
     PopDirective4,
     MessageComponent,
-    ContentProjectionComponent
+    ContentProjectionComponent,
+    ContentTabsetComponent,
+    ContentTabComponent,
+    ContentTabsDemoComponent
   ],
   imports: [
     BrowserModule
