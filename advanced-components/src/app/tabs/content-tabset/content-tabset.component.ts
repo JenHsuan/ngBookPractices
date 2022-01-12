@@ -9,10 +9,12 @@ export class ContentTabsetComponent implements AfterContentInit {
 
   constructor() { }
   ngAfterContentInit(): void{
+    // Set the first one as the active one
     (this as any).tabs.toArray()[0].active = true;
   }
 
   setActive(tab: ContentTabComponent): void {
+    // Set the selected one as the active one
     this.tabs?.toArray().forEach(t => t.active = false);
     tab.active = true;
   }

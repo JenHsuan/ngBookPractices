@@ -21,6 +21,20 @@ import { OnInitDemoComponent } from './lifecycle/on-init-demo/on-init-demo.compo
 import { OnChangesComponent } from './lifecycle/on-changes/on-changes.component';
 import { OnChangesDemoComponent } from './lifecycle/on-changes-demo/on-changes-demo.component';
 import { CommentComponent } from './lifecycle/differs/comment/comment.component';
+import { CommentsListComponent } from './lifecycle/differs/comments-list/comments-list.component';
+import { DiffersDemoComponent } from './lifecycle/differs/differs-demo/differs-demo.component';
+import { AllHooksComponent } from './lifecycle/all-hooks/all-hooks/all-hooks.component';
+import { AllHooksDemoComponent } from './lifecycle/all-hooks/all-hooks-demo/all-hooks-demo.component';
+import { NgBookIfDirective } from './templates/ng-book-if/ng-book-if.directive';
+import { NgBookIfDemoComponent } from './templates/ng-book-if-demo/ng-book-if-demo.component';
+import { NgBookForDemoComponent } from './templates/ng-book-for-demo/ng-book-for-demo.component';
+import { NgBookForDirective } from './templates/ng-book-for/ng-book-for.directive';
+import { DefaultChangeDetectionComponent } from './change-detection/on-push-demo/default-change-detection/default-change-detection.component';
+import { FormsModule } from '@angular/forms';
+import { OnPushDemoComponent } from './change-detection/on-push-demo/on-push-demo/on-push-demo.component';
+import { ObserverableChnageDetectionComponent } from './change-detection/observerableDemo/observerable-chnage-detection/observerable-chnage-detection.component';
+import { ObserverableObseravableDemoComponent } from './change-detection/observerableDemo/observerable-obseravable-demo/observerable-obseravable-demo.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,10 +60,23 @@ import { CommentComponent } from './lifecycle/differs/comment/comment.component'
     OnInitDemoComponent,
     OnChangesComponent,
     OnChangesDemoComponent,
-    CommentComponent
+    CommentComponent,
+    CommentsListComponent,
+    DiffersDemoComponent,
+    AllHooksComponent,
+    AllHooksDemoComponent,
+    NgBookIfDirective,
+    NgBookIfDemoComponent,
+    NgBookForDemoComponent,
+    NgBookForDirective,
+    DefaultChangeDetectionComponent,
+    OnPushDemoComponent,
+    ObserverableChnageDetectionComponent,
+    ObserverableObseravableDemoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

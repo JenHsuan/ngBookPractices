@@ -13,11 +13,20 @@ import {
 })
 export class CommentComponent implements DoCheck {
   @Input() comment: any;
-  @Output() onRemove?: EventEmitter<any>;
+  @Output() onRemove: EventEmitter<any>;
   differ: any;
   constructor(differs: KeyValueDiffers) {
     this.differ = differs.find([]).create();
     this.onRemove = new EventEmitter();
+  }
+  remove(): void {
+    this.onRemove?.emit(this.comment);
+  }
+  clear(): void {
+    delete this.comment.comment;
+  }
+  like(): void {
+    this.comment.likes += 1;
   }
   ngDoCheck(): void {
     const changes = this.differ.diff(this.comment);
@@ -36,6 +45,7 @@ export class CommentComponent implements DoCheck {
   logChange(action: string, r: {[key:string]: any}) {
     if (action === 'changed') {
       console.log(
+        'doCheck',
         r['key'],
         action,
         'from',
@@ -45,11 +55,12 @@ export class CommentComponent implements DoCheck {
     }
 
     if (action === 'added') {
-      console.log(action, r['key'], 'with', r['currentValue'])
+      console.log('doCheck', action, r['key'], 'with', r['currentValue'])
     }
 
     if (action === 'removed') {
       console.log(
+        'doCheck',
         action,
         '(was' + r['previousValue'] + ')')
     }

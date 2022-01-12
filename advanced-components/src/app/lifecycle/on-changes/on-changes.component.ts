@@ -8,6 +8,6 @@ export class OnChangesComponent implements OnChanges {
   @Input('name') name?: string;
   @Input('comment') comment?: string;
   ngOnChanges(changes: {[propName: string]: SimpleChange}): void {
-    console.log(changes)
+    console.log('on-changes', changes)
   }
 }
