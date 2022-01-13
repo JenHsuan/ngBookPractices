@@ -4,7 +4,11 @@ import {
   Input,
   Output
 } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Product } from '../product.model';
+import { IProductState } from '../ngrx/states';
+import { Observable } from 'rxjs';
+import { SetCurrentProduct } from '../ngrx/actions';
 
 @Component({
   selector: 'app-products-list',
@@ -13,26 +17,13 @@ import { Product } from '../product.model';
 })
 
 export class ProductsListComponent {
-  @Output() onProductSelected:EventEmitter<Product>;
-  @Input() productList: Product[];
+  appProduct: Observable<IProductState>
 
-  private currentProduct: Product;
-
-  constructor() {
-    this.onProductSelected = new EventEmitter();
+  constructor(private store: Store<{'appProduct': IProductState}>) {
+    this.appProduct = this.store.select('appProduct');
   }
 
   clicked(product: Product): void {
-    this.currentProduct = product;
-    this.onProductSelected.emit(product);
+    this.store.dispatch(new SetCurrentProduct(product))
   }
-
-  isSelected(product: Product): boolean {
-    if (!product || !this.currentProduct) {
-      return false;
-    }
-
-    return product.sku === this.currentProduct.sku;
-  }
-
 }

@@ -7,7 +7,8 @@ import { ProductRowComponent } from './product-row/product-row.component';
 import { ProductImageComponent } from './product-image/product-image.component';
 import { ProductDepartmentComponent } from './product-department/product-department.component';
 import { PriceDisplayComponent } from './price-display/price-display.component';
-
+import { ActionReducerMap, StoreModule } from '@ngrx/store';
+import { AppReducer } from './ngrx/stores';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { PriceDisplayComponent } from './price-display/price-display.component';
     PriceDisplayComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    StoreModule.forRoot(AppReducer)
   ],
   providers: [],
   bootstrap: [AppComponent]

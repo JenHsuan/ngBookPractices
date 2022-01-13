@@ -1,8 +1,8 @@
 <div class="ui items">
     <app-product-row
-        *ngFor= "let myProduct of productList"
+        *ngFor= "let myProduct of (appProduct | async)?.products"
         [product] = 'myProduct'
         (click) = 'clicked(myProduct)'
-        [class.selected] = 'isSelected(myProduct)'>
+        [class.selected] = '(appProduct | async)?.currentProduct?.sku === myProduct.sku'>
     </app-product-row>
 </div>

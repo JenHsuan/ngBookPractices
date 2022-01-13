@@ -11,7 +11,7 @@ import { Product } from '../product.model';
   styleUrls: ['./product-row.component.css']
 })
 export class ProductRowComponent {
-  @Input() product: Product;
+  @Input() product: Product | null;
   @HostBinding('attr.class') cssClass = 'item';
   constructor() { }
 }

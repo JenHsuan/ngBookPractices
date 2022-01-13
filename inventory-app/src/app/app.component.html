@@ -1,5 +1,8 @@
-<div class="inventory-app">
+<!-- <div class="inventory-app" *ngIf="appProduct">
   <app-products-list
-  [productList]='products'
+  [productList]='(appProduct | async).products'
   (onProductSelected)='productWasSelected($event)'></app-products-list>
+</div> -->
+<div class="inventory-app">
+  <app-products-list></app-products-list>
 </div>

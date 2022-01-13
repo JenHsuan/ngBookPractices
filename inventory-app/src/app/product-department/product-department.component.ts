@@ -10,5 +10,5 @@ import { Product } from '../product.model';
   styleUrls: ['./product-department.component.css']
 })
 export class ProductDepartmentComponent {
-  @Input() product: Product;
+  @Input() product: Product | null;
 }
