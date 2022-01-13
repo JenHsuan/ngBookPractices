@@ -98,41 +98,41 @@ npm install --save bootstrap@3 jquery
 - OnInit / OnDestroy
     - OnInit: When the directive properties have been initialzed, and before any of the child directive properties are initialized
     - OnDestroy: When the directive instance is destroyed
-    - example: advanced-components (lifecycle/on-init-demo)
+    - example: advanced-components (advaned-components/lifecycle/on-init-demo)
 - OnChanges
     - When one or more of our component properties have been changed
         - Detect all @Input changes
-    - example: advanced-components (lifecycle/on-changes-demo)
+    - example: advanced-components (advaned-components/lifecycle/on-changes-demo)
         - currentValue, previousValue
 - DoCheck (override OnChanges)
     - There may be times when we just want to do something in case an item was removed or added, or if only a particular property changed, for instance.
     - examples:
-        - advanced-components (lifecycle/differs)
+        - advanced-components (advaned-components/lifecycle/differs)
             - KeyValueDiffers, IterableDiffers
             - Output(), EventEmitter
-        - advanced-components (templates/ng-book-for-demo)
+        - advanced-components (advaned-components/templates/ng-book-for-demo)
             - IterableDiffers
             - DoCheck in Directive
 - AfterContentInit
     - When the initialization of the content of the component or directive (ng-content) has finished
-    - example: advanced-components (lifecycle/all-hooks)
+    - example: advanced-components (advaned-components/lifecycle/all-hooks)
 - AfterContentChecked
     - When the directive check has finished
-    - example: advanced-components (lifecycle/all-hooks)
+    - example: advanced-components (advaned-components/lifecycle/all-hooks)
 - AfterViewInit (Only for component)
     - When the initialization of the view has finished
-    - example: advanced-components (lifecycle/all-hooks)
+    - example: advanced-components (advaned-components/lifecycle/all-hooks)
 - AfterViewChecked (Only for component)
-    - example: advanced-components (lifecycle/all-hooks)
+    - example: advanced-components (advaned-components/lifecycle/all-hooks)
 ### References
 * [Lifecycle Hooks 學習筆記 (一)](https://ithelp.ithome.com.tw/articles/10188047)
 
 ## Template and Redirective
 - Rewriting ngIf directive
-    - example: advanced-components (templates/ng-book-if-demo)
+    - example: advanced-components (advaned-components/templates/ng-book-if-demo)
         - ViewContainerRef, TemplateRef
 - Rewriting ngFor directive
-    - example: advanced-components (templates/ng-book-for-demo)
+    - example: advanced-components (advaned-components/templates/ng-book-for-demo)
         - IterableDiffers
         - DoCheck in Directive
 ## Change detection
@@ -140,4 +140,9 @@ npm install --save bootstrap@3 jquery
     - When a DOM event occurs (like click, change, etc)
     - when an HTTP request is resolved
     - when a Timer is triggered (setTimeOut or setInterval)
-    - example: advanced-components (change-detection/on-push-demo)
+    - example: advanced-components (advaned-components/change-detection/on-push-demo)
+
+## Data binding
+- Two-way data-binding
+    - [(ngModel)] with FormsModule
+    - example: advanced-components (advaned-components/change-detection/on-push-demo)
