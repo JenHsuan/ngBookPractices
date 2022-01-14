@@ -143,6 +143,6 @@ npm install --save bootstrap@3 jquery
     - example: advanced-components (advaned-components/change-detection/on-push-demo)
 
 ## Data binding
-- Two-way data-binding
-    - [(ngModel)] with FormsModule
+- Two-Way-Binding
+    - It's important to use [(ngModel)] with FormsModule (from @angular/forms)
     - example: advanced-components (advaned-components/change-detection/on-push-demo)
