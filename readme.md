@@ -146,3 +146,9 @@ npm install --save bootstrap@3 jquery
 - Two-Way-Binding
     - It's important to use [(ngModel)] with FormsModule (from @angular/forms)
     - example: advanced-components (advaned-components/change-detection/on-push-demo)
+
+```
+
+import { FormsModule } from '@angular/forms';
+
+```
