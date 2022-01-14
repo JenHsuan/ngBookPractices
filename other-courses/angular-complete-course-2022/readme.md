@@ -32,4 +32,35 @@ update(event: Event) {
  class="form-control"
  [(ngModel)]="serverName">
 ```
+    - example: advanced-components (advaned-components/change-detection/on-push-demo)
 
+## Directive
+* Directives are instructions in the DOM
+    - examples
+        - advanced-components (advaned-components/templates/ng-book-if-demo)
+        - advanced-components (advaned-components/templates/ng-book-for-demo)
+* ngIf else + ng-template
+```
+<p *ngIf="serverCreated; else noServer ">{{ Server }}</p>
+<ng-template #noServer>
+    <p>no server created</p>
+</ng-template>
+```
+
+* ngStyle
+
+```
+<p ngStyle="{backgrounColor: getColor()}"></p>
+
+getColor() {
+    return this.serverStatus === 'online' ? 'green' : 'red'
+}
+```
+
+* ngClass
+
+```
+.online {}
+
+<p ngClass="{online: serverStatus === 'online'}"></p>
+```
