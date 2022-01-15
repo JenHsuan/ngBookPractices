@@ -2,7 +2,16 @@ import { Component, OnInit } from '@angular/core';
 //import { HybridComponent } from '../../styling/hybrid/hybrid.component'
 @Component({
   selector: 'app-content-tabs-demo',
-  templateUrl: './content-tabs-demo.component.html'
+  templateUrl: './content-tabs-demo.component.html',
+  styles: [
+    `
+    .link {
+      position: absolute;
+      bottom: 100px;
+      right: 100px;
+    }
+    `
+  ]
 })
 export class ContentTabsDemoComponent implements OnInit {
   tabs: any;
