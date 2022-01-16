@@ -15,6 +15,7 @@ npm install -g @angular/cli
 cd folder
 npm install
 ng serve
+(ng serve --configuration=development)
 
 ```
 # Notes

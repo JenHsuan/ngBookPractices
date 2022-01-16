@@ -1,5 +1,5 @@
-<div *ngIf="track">
-    {{ track['name'] }}
+<div class="track-container" *ngIf="track">
+    <div class="track-title"> {{ track['name'] }}</div>
     <p *ngIf="track['album']">
         <img src="{{ track['album']['images'][1]['url']}}">
     </p>

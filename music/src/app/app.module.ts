@@ -8,6 +8,7 @@ import { AlbumComponent } from './album/album.component';
 import { ArtistComponent } from './artist/artist.component';
 import { SearchComponent } from './search/search.component';
 import { TrackComponent } from './track/track.component';
+import { FocusDirective } from './focus/focus.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TrackComponent } from './track/track.component';
     AlbumComponent,
     ArtistComponent,
     SearchComponent,
-    TrackComponent
+    TrackComponent,
+    FocusDirective
   ],
   imports: [
     BrowserModule,

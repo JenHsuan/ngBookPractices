@@ -1,0 +1,41 @@
+.searchbar-container {
+    width: max-content;
+    margin: 10px auto;
+}
+
+.searchbar-container h1 {
+    text-align: center;
+}
+
+.searchbar {
+    border-radius: 10px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.searchbar input {
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+}
+
+.searchbar button {
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    margin-left: auto;
+    padding-right: 10px;
+}
+
+.searchbar input:focus,
+.searchbar button:focus {
+    outline: none;
+}
+
+.results {
+    margin: 10px;
+}
+.msg {
+    margin: 20px;
+    text-align: center;
+}
