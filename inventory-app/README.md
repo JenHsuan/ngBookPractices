@@ -9,11 +9,23 @@ npm install -g @angular/cli
 
 ```
 
-* Execute
+# Execute
+* In this folder
 ```
 
-cd folder
 npm install
 ng serve
 
 ```
+
+* Create another terminal for providing APIs
+
+```
+
+cd ..
+cd ng-demo-server
+npm install
+npm start
+
+```
+
