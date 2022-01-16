@@ -11,6 +11,9 @@ import { ActionReducerMap, StoreModule } from '@ngrx/store';
 import { AppReducer } from './ngrx/stores';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { EffectsModule } from '@ngrx/effects';
+import { FetchProductsEffect } from './ngrx/effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,9 @@ import { environment } from 'src/environments/environment';
   imports: [
     BrowserModule,
     StoreModule.forRoot(AppReducer),
-    StoreDevtoolsModule.instrument({logOnly: environment.production})
+    StoreDevtoolsModule.instrument({ logOnly: environment.production }),
+    EffectsModule.forRoot([FetchProductsEffect]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

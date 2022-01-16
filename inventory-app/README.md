@@ -1,4 +1,5 @@
 # InventoryApp
+We have to host a node.js server for providing for learning effects in NGRX
 # Usages
 
 * Update or installl angular cli on the local dev environment
@@ -29,3 +30,5 @@ npm start
 
 ```
 
+# Notes
+## Observerable
