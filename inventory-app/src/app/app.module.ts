@@ -9,6 +9,8 @@ import { ProductDepartmentComponent } from './product-department/product-departm
 import { PriceDisplayComponent } from './price-display/price-display.component';
 import { ActionReducerMap, StoreModule } from '@ngrx/store';
 import { AppReducer } from './ngrx/stores';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { AppReducer } from './ngrx/stores';
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot(AppReducer)
+    StoreModule.forRoot(AppReducer),
+    StoreDevtoolsModule.instrument({logOnly: environment.production})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,13 +8,3 @@ export class SetCurrentProduct implements Action {
     readonly type = SET_CURRENT_PRODUCT;
     constructor(public payload: Product) {}
 }
-
-// export class SetCurrentProduct implements Action {
-//     readonly type = SET_CURRENT_PRODUCT;
-//     payload: Product;
-// }
-//     currentProduct: Product
-// ) => ({
-//     type: SET_CURRENT_PRODUCT,
-//     payload: currentProduct
-// });
