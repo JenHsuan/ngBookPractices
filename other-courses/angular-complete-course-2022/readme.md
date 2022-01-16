@@ -1,5 +1,8 @@
 # [Angular - The Complete Guide (2022 Edition)](https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/practice/268/introduction#overview)
 
+## Cli
+* ng g c <name> --skipTests
+
 ## Data binding
 * Communication between templates and TypeScript code
 ### TS -> templates
