@@ -43,14 +43,56 @@ npm install --save bootstrap@3 jquery
             ]
 
 ```
-## Passig states from parents to childs
-- Basic
+## Passig states from parents to childs (bind custom property)
+- examples
     - angular-reddit
+    - other-courses/angular-complete-course-2022/examples/cmp-databinding
 
 ```
 @Input
 
 ```
+
+## Passig callbacks from parents to childs (bind custom event)
+- examples
+    - angular-reddit
+    - other-courses/angular-complete-course-2022/examples/cmp-databinding
+
+```
+  @Output() bluePrintCreated = new EventEmitter<{serverName: string, serverContent: string}>()
+
+```
+
+## View encapsulation
+- we can make sure that whichever styles we define in a CSS file will only get applied to the component they belong to
+    - emulates shadow DOM
+
+```
+
+@Component({
+  selector: 'app-server-element',
+  templateUrl: './server-element.component.html',
+  styleUrls: ['./server-element.component.css'],
+  // Encapsulation
+  encapsulation: ViewEncapsulation.Emulated
+})
+
+```
+
+## Data binding
+### Two-Way-Binding
+- It's important to use [(ngModel)] with FormsModule (from @angular/forms)
+- example: advanced-components (advaned-components/change-detection/on-push-demo)
+
+```
+
+import { FormsModule } from '@angular/forms';
+
+```
+
+### local references (template -> component)
+- ViewChild
+- Content projection (ng-content hook)
 
 ## Dependency injection
 - Basic
@@ -142,13 +184,3 @@ npm install --save bootstrap@3 jquery
     - when a Timer is triggered (setTimeOut or setInterval)
     - example: advanced-components (advaned-components/change-detection/on-push-demo)
 
-## Data binding
-- Two-Way-Binding
-    - It's important to use [(ngModel)] with FormsModule (from @angular/forms)
-    - example: advanced-components (advaned-components/change-detection/on-push-demo)
-
-```
-
-import { FormsModule } from '@angular/forms';
-
-```
