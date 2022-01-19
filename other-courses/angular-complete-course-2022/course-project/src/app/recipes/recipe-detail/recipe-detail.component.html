@@ -3,12 +3,12 @@
         <img src="" alt="">
     </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="recipe">
     <div class="col-xs-12">
-        <h1>Recipe Name</h1>
+        <h1>{{recipe.name}}</h1>
     </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="recipe">
     <div class="col-xs-12">
         <div class="btn-group">
             <button
@@ -26,14 +26,14 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row" *ngIf="recipe">
     <div class="col-xs-12">
-        Description
+        {{recipe.description}}
     </div>
 </div>
 
 
-<div class="row">
+<div class="row" *ngIf="recipe">
     <div class="col-xs-12">
         Ingredients
     </div>
