@@ -126,14 +126,45 @@ import { FormsModule } from '@angular/forms';
     - advanced-components
 
 ## Directive
+- Directives are instructions in the DOM
+    - examples
+        - advanced-components (advaned-components/templates/ng-book-if-demo)
+        - advanced-components (advaned-components/templates/ng-book-for-demo)
+
 - Querying neighbor directive (tabs/content-tabs-demo)
     - advanced-components
         - ***@ContentChildren, QueryList*** -> contain child components
         - Turn QueryList into array in ***ngAfterContentInit***
-- customized directive
-    - advanced-components
-- ng-content
-    - advanced-components
+
+- Attribute directive
+    - Only change the property of the element, look likes a normal HTML attribute (e.g. background-color)
+        - ngStyle
+
+        ```
+        <p ngStyle="{backgrounColor: getColor()}"></p>
+
+        getColor() {
+            return this.serverStatus === 'online' ? 'green' : 'red'
+        }
+        ```
+
+        - ngClass
+
+        ```
+        .online {}
+
+        <p ngClass="{online: serverStatus === 'online'}"></p>
+        ```
+
+- Structural directive
+    - Affect the whole area in the DOM, look likes a normal HTML attribute but have a heading *
+        - ngIf else + ng-template
+        ```
+        <p *ngIf="serverCreated; else noServer ">{{ Server }}</p>
+        <ng-template #noServer>
+            <p>no server created</p>
+        </ng-template>
+        ```
 
 ## Lifecycle sequence
 ### Examples
