@@ -1,7 +1,8 @@
-import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-observerable-chnage-detection',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template:
     `
     <div>

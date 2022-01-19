@@ -1,0 +1,4 @@
+<div class="btn-container">
+    <button (click)="startInterval()" [disabled]="timerId !== null">Game start</button>
+    <button (click)="stopInterval()" [disabled]="timerId === null">Game stop</button>
+</div>

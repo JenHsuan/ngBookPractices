@@ -13,5 +13,23 @@
         <li>Style the element (e.g. paragraph) holding your output text differently in both components</li>
       </ol>
     </div>
+    <hr>
+  </div>
+</div>
+<div class="game-container">
+  <app-game-control (newComponentCreated)="onNewComponentCreated($event)"></app-game-control>
+  <div class="number-container">
+    <div class="odd-container">
+      <h4>Odd</h4>
+      <app-odd
+        [data]="item"
+        *ngFor="let item of odds"></app-odd>
+    </div>
+    <div class="even-container">
+      <h4>Even</h4>
+      <app-even
+         [data]="item"
+         *ngFor="let item of evens"></app-even>
+    </div>
   </div>
 </div>
