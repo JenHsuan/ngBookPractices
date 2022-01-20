@@ -96,7 +96,9 @@ import { FormsModule } from '@angular/forms';
 
 ## Dependency injection
 ### Services
-
+- Dependency injector
+    - Hierarchical injector
+    - @Injectable
 - examples
     - Basic
         - priceService
