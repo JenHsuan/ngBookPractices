@@ -33,27 +33,27 @@ export class ServerElementComponent implements
   }
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit');
-    console.log('textContent:' + this.heading.nativeElement.textContent);
+    //console.log('textContent:' + this.heading.nativeElement.textContent);
   }
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked')
   }
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit')
-    console.log('textContent of Paragraph:' + this.contentParagraph.nativeElement.textContent);
+    //console.log('textContent of Paragraph:' + this.contentParagraph.nativeElement.textContent);
   }
   ngDoCheck(): void {
     console.log("ngDocheck")
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('ngOnChanges:');
-    console.log(changes)
+    //console.log(changes)
   }
 
   ngOnInit(): void {
     console.log('ngOnInit');
-    console.log('textContent:' + this.heading.nativeElement.textContent)
-    console.log('textContent of Paragraph:' + this.contentParagraph.nativeElement.textContent);
+    //console.log('textContent:' + this.heading.nativeElement.textContent)
+    //console.log('textContent of Paragraph:' + this.contentParagraph.nativeElement.textContent);
   }
 
 }
