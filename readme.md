@@ -95,14 +95,17 @@ import { FormsModule } from '@angular/forms';
 - Content projection (ng-content hook)
 
 ## Dependency injection
-- Basic
-    - priceService
-    - analyticsService
-- Injectable
-    - youtubeSearch
-    - routing
-- useFactory
-    - analyticsService
+### Services
+
+- examples
+    - Basic
+        - priceService
+        - analyticsService
+    - Injectable
+        - youtubeSearch
+        - routing
+    - useFactory
+        - analyticsService
 
 ## Learn httpClient and observable
 - Basic
