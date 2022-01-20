@@ -126,18 +126,10 @@ import { FormsModule } from '@angular/forms';
     - advanced-components
 
 ## Directive
-- Directives are instructions in the DOM
-    - examples
-        - advanced-components (advaned-components/templates/ng-book-if-demo)
-        - advanced-components (advaned-components/templates/ng-book-for-demo)
-
-- Querying neighbor directive (tabs/content-tabs-demo)
-    - advanced-components
-        - ***@ContentChildren, QueryList*** -> contain child components
-        - Turn QueryList into array in ***ngAfterContentInit***
-
 - Attribute directive
     - Only change the property of the element, look likes a normal HTML attribute (e.g. background-color)
+        - ElementRef
+    - built-in directive
         - ngStyle
 
         ```
@@ -158,6 +150,8 @@ import { FormsModule } from '@angular/forms';
 
 - Structural directive
     - Affect the whole area in the DOM, look likes a normal HTML attribute but have a heading *
+        - TemplateRef
+    - built-in directive
         - ngIf else + ng-template
         ```
         <p *ngIf="serverCreated; else noServer ">{{ Server }}</p>
@@ -165,6 +159,20 @@ import { FormsModule } from '@angular/forms';
             <p>no server created</p>
         </ng-template>
         ```
+
+- Customized directive
+    - Directives are instructions in the DOM
+        - examples
+            - advanced-components (advaned-components/templates/ng-book-if-demo)
+            - advanced-components (advaned-components/templates/ng-book-for-demo)
+            - other-courses/angular-complete-course-2022/examples/directives/directives-start
+                - HostListener, HostBinding, renderer2
+
+    - Querying neighbor directive (tabs/content-tabs-demo)
+        - advanced-components
+            - ***@ContentChildren, QueryList*** -> contain child components
+            - Turn QueryList into array in ***ngAfterContentInit***
+
 
 ## Lifecycle sequence
 ### Examples

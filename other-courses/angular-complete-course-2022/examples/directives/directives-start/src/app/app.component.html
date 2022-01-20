@@ -17,7 +17,7 @@
         </div>
       </ul>
       <ul class="list-group">
-        <div *ngIf="!onlyOdd">
+        <div *appUnless="onlyOdd">
           <li
             class="list-group-item"
             [ngClass]="{odd: item % 2 !== 0}"
@@ -26,7 +26,33 @@
             {{ item }}
           </li>
         </div>
+        <!-- <div *ngIf="!onlyOdd">
+          <li
+            class="list-group-item"
+            [ngClass]="{odd: item % 2 !== 0}"
+            [ngStyle]="{backgroundColor: item % 2 !== 0 ? 'yellow' : 'transparent'}"
+            *ngFor="let item of evenNumbers">
+            {{ item }}
+          </li>
+        </div>
+        <ng-template [ngIf]="!onlyOdd">
+          <div>
+            <li
+            class="list-group-item"
+            [ngClass]="{odd: item % 2 !== 0}"
+            [ngStyle]="{backgroundColor: item % 2 !== 0 ? 'yellow' : 'transparent'}"
+            *ngFor="let item of evenNumbers">
+            {{ item }}
+          </li>
+        </div>
+      </ng-template> -->
       </ul>
+      <p appBasicHighlight>test</p>
+      <p appBetterHighlight defaultColor="yellow" hl="red">test</p>
+      <div [ngSwitch]="value">
+        <div *ngSwitchCase="5">value is 5</div>
+        <div *ngSwitchDefault>value is 10</div>
+      </div>
     </div>
   </div>
 </div>
