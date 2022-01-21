@@ -108,6 +108,7 @@ import { FormsModule } from '@angular/forms';
         - routing
     - useFactory
         - analyticsService
+## Routing
 
 ## Learn httpClient and observable
 - Basic
