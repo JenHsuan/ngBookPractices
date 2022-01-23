@@ -22,36 +22,38 @@ export class ServerElementComponent implements
   @ViewChild('heading', { static: true }) heading: ElementRef;
   @ContentChild('contentParagraph', { static: true }) contentParagraph: ElementRef;
 
+  id: number;
   constructor() {
-    console.log('constructor');
+    this.id = Math.floor(Math.random() * 100)
+    console.log(this.id + ': constructor');
   }
   ngOnDestroy(): void {
-    console.log('ngOnDestroy');
+    console.log(this.id + ': ngOnDestroy');
   }
   ngAfterViewChecked(): void {
-    console.log('ngAfterViewChecked');
+    console.log(this.id + ': ngAfterViewChecked');
   }
   ngAfterViewInit(): void {
-    console.log('ngAfterViewInit');
+    console.log(this.id + ': ngAfterViewInit');
     //console.log('textContent:' + this.heading.nativeElement.textContent);
   }
   ngAfterContentChecked(): void {
-    console.log('ngAfterContentChecked')
+    console.log(this.id + ': ngAfterContentChecked')
   }
   ngAfterContentInit(): void {
-    console.log('ngAfterContentInit')
+    console.log(this.id + ': ngAfterContentInit')
     //console.log('textContent of Paragraph:' + this.contentParagraph.nativeElement.textContent);
   }
   ngDoCheck(): void {
-    console.log("ngDocheck")
+    console.log(this.id + ": ngDocheck")
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnChanges:');
+    console.log(this.id + ': ngOnChanges');
     //console.log(changes)
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit');
+    console.log(this.id + ': ngOnInit');
     //console.log('textContent:' + this.heading.nativeElement.textContent)
     //console.log('textContent of Paragraph:' + this.contentParagraph.nativeElement.textContent);
   }

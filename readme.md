@@ -108,18 +108,88 @@ import { FormsModule } from '@angular/forms';
         - routing
     - useFactory
         - analyticsService
-## Routing
 
+## Routing
+- examples
+    - routing
+    - music
+    - other-courses/angular-complete-course-2022/examples/routing-start
+
+- Settings
+```
+import { RouterModule, Routes } from '@angular/router';
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent},
+  { path: 'users', component: UsersComponent},
+  { path: 'servers', component: ServerComponent},
+]
+@NgModule({
+  ...,
+  imports: [
+    ...,
+    RouterModule.forRoot(appRoutes)
+  ]
+
+<li role="presentation" routerLinkActive="active"><a routerLink="/">Home</a></li>
+<router-outlet></router-outlet>
+
+```
+
+- Link to the specfic route
+
+```
+<a
+        [routerLink]="['/servers', server.id, 'edit']"
+        [queryParams]="{allowEdit: '1'}"
+        fragment="loading">
+        {{ server.name }}
+      </a>
+
+
+    this.router.navigate(['edit'], {
+      relativeTo: this.route,
+      queryParamsHandling: 'preserve'
+    })
+```
+
+- Inject current route path
+```
+private route: ActivatedRoute
+
+```
+
+- Get path parameters
+```
+
+this.route.snapshot.params
+this.route.params.subscribe((params: Params) => {
+      this.server = this.serversService.getServer(+params.id);
+    }))
+
+```
+
+- Get query parameters
+```
+this.route.queryParams.subscribe((queryParams: Params) => {
+      this.allowEdit = queryParams['allowEdit'] === '1' ? true : false;
+    })
+```
+
+- Set the not found page
+```
+
+  { path: 'not-found', component: PageNotFoundComponent },
+  { path: '**', pathMatch: 'full', redirectTo: '/not-found'}
+
+```
+
+- Protect routes and child routes with canActivate, canActivateChild
+- Resolvers
 ## Learn httpClient and observable
 - Basic
     - simpleHttp
     - youtubeSearch
     - moreHttpRequest
-
-## Routing
-- Basic
-    - routing
-    - music
 
 ### Rx & Observerable
 - Pipe, operators
