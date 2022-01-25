@@ -184,16 +184,21 @@ this.route.queryParams.subscribe((queryParams: Params) => {
 ```
 
 - Protect routes and child routes with canActivate, canActivateChild
-- Resolvers
-## Learn httpClient and observable
+## Observerable
+- Observerable: data source like HTTP, Events
+- Observer: handle data, handle error, handle completion
+- examples
+    - Pipe, operators
+        - youtubeSearch
+    - Resolvers
+
+### Rx
+### httpClient
 - Basic
     - simpleHttp
     - youtubeSearch
     - moreHttpRequest
 
-### Rx & Observerable
-- Pipe, operators
-    - youtubeSearch
 
 ## Styling
 - inline, external, hybrid
