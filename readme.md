@@ -188,11 +188,18 @@ this.route.queryParams.subscribe((queryParams: Params) => {
 - Observerable: data source like HTTP, Events
 - Observer: handle data, handle error, handle completion
 - examples
-    - Pipe, operators
-        - youtubeSearch
-    - Resolvers
+    - other-courses/angular-complete-course-2022/examples/observable/obs-01-start
 
 ### Rx
+- Pipe
+- Operators: filter, map
+- Subject
+- examples
+    - youtubeSearch
+    - Resolvers
+    - other-courses/angular-complete-course-2022/examples/observable/obs-01-start
+
+
 ### httpClient
 - Basic
     - simpleHttp
