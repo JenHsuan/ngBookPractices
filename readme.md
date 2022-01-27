@@ -91,7 +91,7 @@ import { FormsModule } from '@angular/forms';
 ```
 
 ### local references (template -> component)
-- ViewChild
+- ViewChild: get the variable from the view
 - Content projection (ng-content hook)
 
 ## Dependency injection
@@ -199,6 +199,21 @@ this.route.queryParams.subscribe((queryParams: Params) => {
     - Resolvers
     - other-courses/angular-complete-course-2022/examples/observable/obs-01-start
 
+## Form
+- Types
+    1. Template-driven: Angular infers the Form Object from the DOM
+    2. Reactive: Form is created programmatically and synchronized with the DOM
+- TD: Setting
+    1. import FormsModule in the app.module.ts
+    2. Add ngModel and name to the input field
+    3. Add ngForm and ngSubmit in the form
+    4. Add required for validations ([built-in validator](https://angular.io/api/forms/Validators))
+    5. Overwrite .ng-valid
+    6. Validation messages: add variable to ngModel and use ngIf with .vlid && .touched
+    7. Default value
+    8. Group values (ngModelGroup) & validation messages
+- examples
+    - other-courses/angular-complete-course-2022/examples/form-td-start
 
 ### httpClient
 - Basic
