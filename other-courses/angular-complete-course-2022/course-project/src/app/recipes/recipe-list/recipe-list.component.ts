@@ -21,11 +21,11 @@ export class RecipeListComponent implements OnInit {
     this.recipes = this.recipeService.getRecipes();
   }
 
-  onRecipeItemSelected(recipe: Recipe) {
-    this.selectedRecipe = recipe;
-    this.recipeService.recipeSelected.emit(this.selectedRecipe);
-    //this.recipeItemSelected.emit(this.selectedRecipe);
-  }
+  // onRecipeItemSelected(recipe: Recipe) {
+  //   this.selectedRecipe = recipe;
+  //   this.recipeService.recipeSelected.next(this.selectedRecipe);
+  //   //this.recipeItemSelected.emit(this.selectedRecipe);
+  // }
 
   onNewRecipe() {
     this.router.navigate(['new'], { relativeTo: this.route})
