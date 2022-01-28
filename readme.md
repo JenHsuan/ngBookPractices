@@ -212,6 +212,10 @@ this.route.queryParams.subscribe((queryParams: Params) => {
     6. Validation messages: add variable to ngModel and use ngIf with .vlid && .touched
     7. Default value
     8. Group values (ngModelGroup) & validation messages
+- Reactive: Setting
+    1. Import ReactiveFormModule instead of FormModule
+    2. Create instances of FormGroup and FormControl in the TS file
+    3. Bind the template form to the TS file
 - examples
     - other-courses/angular-complete-course-2022/examples/form-td-start
 
