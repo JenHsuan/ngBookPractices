@@ -1,7 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-      <!--
+<!--
           Create a Form with the following Controls and Validators
           1) Project Name (should not be empty)
           2) Mail (should not be a empty and a valid email)
@@ -14,6 +11,60 @@
 
           Upon submitting the form, simply print the value to the console
       -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+        <div class="form-group">
+          <label for="project">Project</label>
+          <input
+            type="text"
+            id="project"
+            name="project"
+            formControlName="project"
+            class="form-control">
+        </div>
+        <span
+          class="help-block"
+          *ngIf="!signupForm.get('project').valid && signupForm.get('project').touched">
+          <span *ngIf="signupForm.get('project').errors['required']">
+            This name is required!
+          </span>
+          <span *ngIf="signupForm.get('project').errors['forbiddenProject']">
+            This name is invalid!
+          </span>
+        </span>
+        <div class="form-group">
+          <label for="email">email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            formControlName="email"
+            class="form-control">
+        </div>
+        <span
+          class="help-block"
+          *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+          <span *ngIf="signupForm.get('email').errors['required']">
+            This email is required!
+          </span>
+          <span *ngIf="signupForm.get('email').errors['email']">
+            This email is invalid!
+          </span>
+        </span>
+        <div class="radio" *ngFor="let status of projectStatus">
+          <input
+            type="radio"
+            name="status"
+            [value]="status"
+            formControlName="status"> {{status}}
+        </div>
+        <button
+          class="btn btn-primary"
+          type="submit">Submit</button>
+      </form>
+
     </div>
   </div>
 </div>
