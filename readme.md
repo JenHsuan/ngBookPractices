@@ -215,7 +215,7 @@ this.route.queryParams.subscribe((queryParams: Params) => {
 - Reactive: Setting
     1. Import ReactiveFormModule instead of FormModule
     2. Create instances of FormGroup and FormControl in the TS file
-    3. Bind the template form to the TS file
+    3. Sync HTML with the form (formControlName, formArray)
 - examples
     - other-courses/angular-complete-course-2022/examples/form-td-start
 

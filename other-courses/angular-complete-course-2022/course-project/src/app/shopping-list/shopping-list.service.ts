@@ -12,9 +12,14 @@ export class ShoppingListService {
   ];
   //ingredientAdded = new EventEmitter<Ingredient[]>();
   ingredientAdded = new Subject<Ingredient[]>();
+  startEditing = new Subject<number>();
 
   getIngredients(): Ingredient[] {
     return this.ingredients.slice();
+  }
+
+  getIngredient(index: number): Ingredient {
+    return this.ingredients[index];
   }
 
   addIngredient(ingredient: Ingredient): void {
@@ -22,9 +27,20 @@ export class ShoppingListService {
     this.ingredientAdded.next(this.ingredients.slice());
   }
 
+  deleteIngredient(index: number): void {
+    this.ingredients.splice(index, 1);
+    this.ingredientAdded.next(this.ingredients.slice());
+  }
+
   addIngredients(ingredients: Ingredient[]) {
     //this.ingredients = [...this.ingredients, ...ingredients]
     this.ingredients.push(...ingredients);
+    this.ingredientAdded.next(this.ingredients.slice());
+  }
+
+  updateIngredient(index: number, newIngredient: Ingredient) {
+    //this.ingredients = [...this.ingredients, ...ingredients]
+    this.ingredients[index] = newIngredient;
     this.ingredientAdded.next(this.ingredients.slice());
   }
 }
