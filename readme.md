@@ -218,8 +218,22 @@ this.route.queryParams.subscribe((queryParams: Params) => {
     3. Sync HTML with the form (formControlName, formArray)
 - examples
     - other-courses/angular-complete-course-2022/examples/form-td-start
+    - other-courses/angular-complete-course-2022/examples/form-reactive-start
 
-### httpClient
+## Pipe
+- Tramsforming value in the template
+- Built-in pipes
+    - uppercase
+    - date: 'fullDate'
+- Customized pipes
+    1. Implement a class with PipeTransform
+    2. Add Pipe decorator
+    3. Add customized pipe to the template
+- Pure/Impure pipes
+- Async pipes
+- examples
+    - other-courses/angular-complete-course-2022/examples/pipes-start
+## httpClient
 - Basic
     - simpleHttp
     - youtubeSearch
