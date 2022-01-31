@@ -233,12 +233,12 @@ this.route.queryParams.subscribe((queryParams: Params) => {
 - Async pipes
 - examples
     - other-courses/angular-complete-course-2022/examples/pipes-start
-## httpClient
-- Basic
+
+## HTTP request
+- examples
     - simpleHttp
     - youtubeSearch
     - moreHttpRequest
-
 
 ## Styling
 - inline, external, hybrid
