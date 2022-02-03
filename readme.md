@@ -192,8 +192,15 @@ this.route.queryParams.subscribe((queryParams: Params) => {
 
 ### Rx
 - Pipe
-- Operators: filter, map
+- Operators
+    - filter
+    - map
+    - catchError & throwError
+    - tap
 - Subject
+    - Can be used in the service and being subscribed in different components
+    - Replace EventEmitter
+    - Subscribe for the error message form HTTP client
 - examples
     - youtubeSearch
     - Resolvers
@@ -235,10 +242,45 @@ this.route.queryParams.subscribe((queryParams: Params) => {
     - other-courses/angular-complete-course-2022/examples/pipes-start
 
 ## HTTP request
+- Setting
+    - 1. Import HTTP module in the root module
+    - 2. Inject HTTP module
+    - 3. The request is only sent when being subscribed
+    - 4. It will be better to move the fetching logic to the outsourceing service
+    - 5. Add Subject for error handling
+- Send post requests
+    - URL, body, and subscribe
+- Send get requests
+    - URL, and subscribe
+- Headers
+- Response type
+```
+{
+  responseType: 'text'
+}
+```
+- Query params (HttpParams is immutable)
+```
+{
+    headers: new HttpHeaders({ 'Custom-Header': 'Hello' }),
+    params: new HttpParams().set('print', 'pretty')
+}
+```
+- Change the response object
+```
+{
+    //observe: 'body' (default)
+    observe: 'response' // will reopnse all HTTP request object
+}
+```
+- Interceptors
+    - manipulating request objects
+    - manipulating response objects
 - examples
     - simpleHttp
     - youtubeSearch
     - moreHttpRequest
+    - other-courses/angular-complete-course-2022/examples/http-01-start
 
 ## Styling
 - inline, external, hybrid
